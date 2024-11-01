@@ -104,9 +104,9 @@ function SearchForecast({ weatherData, date, time }) {
           <FaSearch className="text-slate-700" />
           <input
             type="text"
-            placeholder="Enter city name..."
+            placeholder="Enter city"
             value={input}
-            className="text-black focus:outline-none bg-transparent"
+            className="text-black focus:outline-none bg-transparent max-[375px]:w-full"
             onChange={(e) => handleInputChange(e.target.value)}
           />
         </div>
@@ -130,13 +130,19 @@ function SearchForecast({ weatherData, date, time }) {
             <span>{displayData.weather[0].description}</span>
           </div>
           <Line />
-          <p>Feels Like: {displayData.main.feels_like}</p>
+          <p>Feels Like: {displayData.main
+              ? (displayData.main.temp - 273.15).toFixed(2)
+              : "--"}{" "}
+            &deg;C</p>
           <Line />
-          <p>Temperature: {displayData.main.temp}</p>
+          <p>Temperature: {displayData.main
+              ? (displayData.main.temp - 273.15).toFixed(2)
+              : "--"}{" "}
+            &deg;C</p>
           <Line />
-          <p>Humidity: {displayData.main.humidity}</p>
+          <p>Humidity: {displayData.main.humidity}{" "}g/m3</p>
           <Line />
-          <p>Wind Speed: {displayData.wind.speed}</p>
+          <p>Wind Speed: {displayData.wind.speed}{" "}meter/sec</p>
           <Line />
           <p>Clouds: {displayData.clouds.all}</p>
         </div>

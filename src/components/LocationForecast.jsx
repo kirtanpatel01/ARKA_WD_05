@@ -95,6 +95,7 @@ function LocationForecast({ weatherData }) {
     }
   }, [weatherData]);
 
+  console.log(weatherData);
   return (
     <div
       className="w-1/2 h-fit text-white p-4 bg-opacity-40 bg-black rounded-lg shadow-md flex flex-col gap-2
@@ -110,7 +111,15 @@ function LocationForecast({ weatherData }) {
       </div>
       <div className="w-full flex flex-col items-center">
         <img src={icon} alt="weather icon" className="w-56 h-56 m-8" />
-        <p>{weatherData.weather?.[0]?.main || "--"}</p>
+        <div className="flex items-center gap-1">
+          <span className="text-2xl">
+            {weatherData.main
+              ? (weatherData.main.temp - 273.15).toFixed(2)
+              : "--"}{" "}
+            &deg;C
+          </span>-
+          <span>{weatherData.weather?.[0]?.main || "--"}</span>
+        </div>
       </div>
       <div className="p-4 flex flex-col gap-6 max-[375px]:p-2">
         <div className="flex gap-2">
