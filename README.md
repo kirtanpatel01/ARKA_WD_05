@@ -19,7 +19,7 @@ A simple and interactive weather forecast application built using **React** and 
 
 ## 📸 Preview
 
-![Weather Forecast App Screenshot](src/assets/screenshot.png) <!-- Update this with a link to your screenshot -->
+![Weather Forecast App Screenshot](src/assets/image.png) <!-- Update this with a link to your screenshot -->
 
 ## ⚙️ Installation and Setup
 
