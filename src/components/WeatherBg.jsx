@@ -27,7 +27,6 @@ function WeatherBg() {
   const [weatherData, setWeatherData] = useState({});
 
   useEffect(() => {
-    console.log("come in useeffect");
     navigator.geolocation.getCurrentPosition(async (position) => {
       const { latitude, longitude } = position.coords;
 

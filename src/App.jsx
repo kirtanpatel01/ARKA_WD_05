@@ -1,4 +1,4 @@
-import WeatherBg from "./components/WeatherBg"
+import WeatherBg from "./components/WeatherBg";
 
 function App() {
 
