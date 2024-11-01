@@ -98,7 +98,7 @@ function SearchForecast({ weatherData, date, time }) {
       className="w-1/2 h-full text-white px-4 py-8 bg-opacity-40 bg-black rounded-lg shadow-md flex flex-col gap-8
       max-lg:w-full max-[375px]:p-0 max-[375px]:gap-4"
     >
-      <h1 className="text-center max-[375px]:mt-4">Search Location by City</h1>
+      <h1 className="text-center max-[375px]:mt-4 max-[280px]:text-sm">Search Location by City</h1>
       <div className="flex items-center gap-2 max-[375px]:mx-2">
         <div className="flex items-center bg-white rounded-md px-4 py-2 flex-grow gap-2 max-[375px]:px-2">
           <FaSearch className="text-slate-700" />
@@ -111,7 +111,7 @@ function SearchForecast({ weatherData, date, time }) {
           />
         </div>
         <button
-          className="bg-slate-800 hover:bg-blue-700 px-4 py-2 rounded-md font-semibold max-[375px]:px-2"
+          className="bg-slate-800 hover:bg-blue-700 px-4 py-2 rounded-md font-semibold max-[375px]:px-2 max-[280px]:text-base"
           onClick={fetchData}
         >
           Find
@@ -119,7 +119,7 @@ function SearchForecast({ weatherData, date, time }) {
       </div>
 
       {displayData && displayData.weather && displayData.main && (
-        <div className="flex flex-col  items-center gap-4">
+        <div className="flex flex-col items-center gap-4">
           <div className="text-center">
             <span>{displayData.name}</span>
             <span className="text-base"> ({displayData.sys?.country})</span>
@@ -132,17 +132,17 @@ function SearchForecast({ weatherData, date, time }) {
           <Line />
           <p>Feels Like: {displayData.main
               ? (displayData.main.temp - 273.15).toFixed(2)
-              : "--"}{" "}
+              : "--"}
             &deg;C</p>
           <Line />
           <p>Temperature: {displayData.main
               ? (displayData.main.temp - 273.15).toFixed(2)
-              : "--"}{" "}
+              : "--"}
             &deg;C</p>
           <Line />
-          <p>Humidity: {displayData.main.humidity}{" "}g/m3</p>
+          <p>Humidity: {displayData.main.humidity}{" "}g/m<sup>3</sup></p>
           <Line />
-          <p>Wind Speed: {displayData.wind.speed}{" "}meter/sec</p>
+          <p>Wind Speed: {displayData.wind.speed}{" "}m/sec</p>
           <Line />
           <p>Clouds: {displayData.clouds.all}</p>
         </div>

@@ -102,7 +102,7 @@ function LocationForecast({ weatherData }) {
     max-lg:w-full max-[375px]:p-0"
     >
       <div className="text-end mt-6 mr-6 max-[375px]:mt-4 max-[375px]:mr-4">
-        <p className="text-4xl font-semibold">
+        <p className="text-4xl font-semibold max-[280px]:text-3xl">
           {weatherData.name || (
             <span className="font-normal">Don't have Location access !</span>
           )}
@@ -110,9 +110,9 @@ function LocationForecast({ weatherData }) {
         <p className="text-end mr-1 mt-3">{weatherData.sys?.country || "--"}</p>
       </div>
       <div className="w-full flex flex-col items-center">
-        <img src={icon} alt="weather icon" className="w-56 h-56 m-8" />
+        <img src={icon} alt="weather icon" className="w-56 h-56 m-8 max-[280px]:m-0" />
         <div className="flex items-center gap-1">
-          <span className="text-2xl">
+          <span className="text-xl">
             {weatherData.main
               ? (weatherData.main.temp - 273.15).toFixed(2)
               : "--"}{" "}
@@ -121,16 +121,16 @@ function LocationForecast({ weatherData }) {
           <span>{weatherData.weather?.[0]?.main || "--"}</span>
         </div>
       </div>
-      <div className="p-4 flex flex-col gap-6 max-[375px]:p-2">
+      <div className="p-4 flex flex-col gap-1 max-[375px]:p-2">
         <div className="flex gap-2">
-          <p className="text-6xl tracking-wider">
+          <p className="text-6xl tracking-wider max-[286px]:text-4xl">
             {dateTime.time.split(" ")[0]}
           </p>
           <span className="flex self-end mb-1">
             {dateTime.time.split(" ")[1]}
           </span>
         </div>
-        <div className="flex gap-6 text-2xl">
+        <div className="flex items-center text-2xl gap-2 max-[280px]:text-base">
           <span>{dateTime.day},</span>
           <span>{dateTime.date}</span>
         </div>

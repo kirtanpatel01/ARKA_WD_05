@@ -18,8 +18,8 @@ function Container({ weatherData }) {
   };
 
   return (
-    <div className="bg-slate-900 bg-opacity-5 flex gap-4 w-2/3 h-fit rounded-xl backdrop-blur-lg border border-gray-700 shadow-lg p-6 text-white text-xl
-    max-lg:grid max-lg:grid-rows-2 max-lg:mt-4 max-sm:w-full max-sm:m-4 max-sm:mb-20 max-[415px]:p-2 max-[375px]:m-0 max-[375px]:mb-20">
+    <div className="bg-slate-900 bg-opacity-5 flex gap-4 w-2/3 h-fit rounded-xl backdrop-blur-lg border border-gray-700 shadow-lg p-6 text-white
+    max-lg:grid max-lg:grid-rows-2 max-lg:mt-4 max-sm:w-full max-sm:m-4 max-sm:mb-20 max-[415px]:p-2 max-[375px]:m-0 max-[375px]:mb-20 max-[280px]:p-1">
       <LocationForecast weatherData={weatherData}/>
       <SearchForecast weatherData={weatherData} />
     </div>
